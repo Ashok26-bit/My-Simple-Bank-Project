@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Banking Rules - Knowledge Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🏦 Indian Banking Portal</div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#rules" onclick="showSection('rules')">Banking Rules</a></li>
+                <li><a href="#account" onclick="showSection('account')">Account Opening</a></li>
+                <li><a href="#loans" onclick="showSection('loans')">Loans & Offers</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="container">
+            <div class="hero">
+                <h1>Welcome to Indian Banking Rules Portal</h1>
+                <p>Your comprehensive guide to banking regulations and procedures in India</p>
+                <button class="btn btn-primary" onclick="showSection('rules')">Explore Rules</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banking Rules Section -->
+    <section id="rules" class="section">
+        <div class="container">
+            <h2>Indian Banking Rules & Regulations</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>RBI Regulations</h3>
+                    <p>Indian banks main rules are under <strong>RBI</strong> and <strong>Banking Regulation Act, 1949</strong>.</p>
+                    <p>RBI prescribes licensing, governance, products/services, and compliance laws for all banks.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Customer Protection</h3>
+                    <p>All banks must follow:</p>
+                    <ul>
+                        <li>Customer protection policies</li>
+                        <li>Fair practices code</li>
+                        <li>Legal risk management</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h3>Compliance Requirements</h3>
+                    <p>Banks must ensure:</p>
+                    <ul>
+                        <li>Regular audits</li>
+                        <li>Anti-money laundering (AML)</li>
+                        <li>Know Your Customer (KYC)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Opening Section -->
+    <section id="account" class="section">
+        <div class="container">
+            <h2>Account Opening Procedure</h2>
+            <div class="form-section">
+                <div class="documents-list">
+                    <h3>Documents Required for KYC:</h3>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Passport</label>
+                        <label><input type="checkbox"> PAN Card</label>
+                        <label><input type="checkbox"> Voter's ID</label>
+                        <label><input type="checkbox"> Aadhaar</label>
+                        <label><input type="checkbox"> Driving License</label>
+                        <label><input type="checkbox"> Ration Card</label>
+                        <label><input type="checkbox"> Latest Electricity/Telephone Bill (Address Proof)</label>
+                    </div>
+                </div>
+
+                <div class="requirements">
+                    <h3>Requirements:</h3>
+                    <ul>
+                        <li>✓ KYC verification mandatory for all accounts</li>
+                        <li>✓ Address verification required</li>
+                        <li>✓ At least one government-issued ID</li>
+                        <li>✓ Recent address proof (utility bill)</li>
+                    </ul>
+                </div>
+
+                <form class="account-form" onsubmit="submitAccountForm(event)">
+                    <h3>Quick Account Interest Form</h3>
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="primaryDoc" required>
+                            <option value="">Select Primary Document</option>
+                            <option value="passport">Passport</option>
+                            <option value="pancard">PAN Card</option>
+                            <option value="aadhaar">Aadhaar</option>
+                            <option value="drivinglicense">Driving License</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Interest</button>
+                </form>
+                <div id="formMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loans Section -->
+    <section id="loans" class="section">
+        <div class="container">
+            <h2>Loans & Offers</h2>
+            
+            <div class="eligibility-section">
+                <h3>Loan Eligibility Criteria</h3>
+                <div class="eligibility-card">
+                    <h4>Age Requirements</h4>
+                    <p><strong>Minimum Age:</strong> 21 years</p>
+                    <p><strong>Maximum Age:</strong> 60 years (Salaried) / 65 years (Self-employed)</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>Income Requirements</h4>
+                    <p><strong>Personal Loan Minimum Income:</strong> ₹15,000 - ₹25,000/month</p>
+                    <p><strong>Note:</strong> Varies by bank and loan type</p>
+                </div>
+                <div class="eligibility-card">
+                    <h4>Credit Score</h4>
+                    <p><strong>Preferred Score:</strong> 700+</p>
+                    <p>Higher scores get better interest rates and loan amounts</p>
+                </div>
+            </div>
+
+            <div class="loan-products">
+                <h3>Available Loan Products</h3>
+                <div class="loan-card">
+                    <h4>🏠 Home Loans</h4>
+                    <p class="interest-rate">Interest Rate: ~8.6% p.a.</p>
+                    <p>Long-term financing for property purchase or construction</p>
+                </div>
+                <div class="loan-card">
+                    <h4>💰 Personal Loans</h4>
+                    <p class="interest-rate">Interest Rate: 9% onwards</p>
+                    <p>Flexible loans for personal needs without collateral</p>
+                </div>
+                <div class="loan-card">
+                    <h4>👴 Pensioner Schemes</h4>
+                    <p class="interest-rate">Special Rates Available</p>
+                    <p>Tailored products for senior citizens and pensioners</p>
+                </div>
+                <div class="loan-card">
+                    <h4>🚗 Auto Loans</h4>
+                    <p class="interest-rate">Competitive Rates</p>
+                    <p>Finance your vehicle purchase with attractive terms</p>
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <h3>EMI Calculator</h3>
+                <div class="calculator">
+                    <div class="form-group">
+                        <label>Loan Amount (₹)</label>
+                        <input type="number" id="loanAmount" placeholder="Enter amount" value="100000" min="0" oninput="calculateEMI()">
+                    </div>
+                    <div class="form-group">
+                        <label>Interest Rate (% p.a.)</label>
+                        <input type="number" id="interestRate" placeholder="Enter rate" value="9" min="0" step="0.1" oninput="calculateEMI()">
+                    </div>
+                    <div class="form-group">
+                        <label>Tenure (Months)</label>
+                        <input type="number" id="tenure" placeholder="Enter months" value="12" min="1" oninput="calculateEMI()">
+                    </div>
+                    <div class="result">
+                        <p><strong>Monthly EMI:</strong> <span id="emiResult">₹8,865</span></p>
+                        <p><strong>Total Amount Payable:</strong> <span id="totalResult">₹106,380</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-section">
+                <form class="contact-form" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contactPhone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="contactQuery" required>
+                            <option value="">Select Query Type</option>
+                            <option value="account">Account Opening</option>
+                            <option value="loan">Loan Inquiry</option>
+                            <option value="rules">Rules & Regulations</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="contactMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Indian Banking Rules Portal. All rights reserved.</p>
+            <p>Information sourced from RBI and Banking Regulation Act, 1949</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
